@@ -2,53 +2,43 @@
 
 @theme {
   /* Color palette */
-  --color-main-50: #fdf8f0;
-  --color-main-100: #f9f0e1;
-  --color-main-200: #f2dfc2;
-  --color-main-300: #e8c899;
-  --color-main-400: #dbb06e;
-  --color-main-500: #B98739;
-  --color-main-600: #a67a2f;
-  --color-main-700: #8a6126;
-  --color-main-800: #6f4e1f;
-  --color-main-900: #5a3f1a;
-  --color-main-950: #2d1f0d;
+  --color-main: #B98739;
+  --color-main-50: color-mix(in oklch, var(--color-main) 5%, white 30%);
+  --color-main-100: color-mix(in oklch, var(--color-main) 10%, white 30%);
+  --color-main-200: color-mix(in oklch, var(--color-main) 20%, white 30%);
+  --color-main-300: color-mix(in oklch, var(--color-main) 30%, white 30%);
+  --color-main-400: color-mix(in oklch, var(--color-main) 40%, white 30%);
+  --color-main-500: var(--color-main);
+  --color-main-600: color-mix(in oklch, var(--color-main) 60%, black 30%);
+  --color-main-700: color-mix(in oklch, var(--color-main) 70%, black 30%);
+  --color-main-800: color-mix(in oklch, var(--color-main) 80%, black 30%);
+  --color-main-900: color-mix(in oklch, var(--color-main) 90%, black 30%);
 
-  --color-secondary-50: #f0f5f3;
-  --color-secondary-100: #dae8e2;
-  --color-secondary-200: #b5d1c5;
-  --color-secondary-300: #89b3a3;
-  --color-secondary-400: #6F8F80;
-  --color-secondary-500: #5a7a6b;
-  --color-secondary-600: #4a6256;
-  --color-secondary-700: #3d5047;
-  --color-secondary-800: #34413b;
-  --color-secondary-900: #2d3631;
-  --color-secondary-950: #161c19;
+  --color-secondary: #6F8F80;
+  --color-secondary-50: color-mix(in oklch, var(--color-secondary) 5%, white 30%);
+  --color-secondary-100: color-mix(in oklch, var(--color-secondary) 10%, white 30%);
+  --color-secondary-200: color-mix(in oklch, var(--color-secondary) 20%, white 30%);
+  --color-secondary-300: color-mix(in oklch, var(--color-secondary) 30%, white 30%);
+  --color-secondary-400: color-mix(in oklch, var(--color-secondary) 40%, white 30%);
+  --color-secondary-500: var(--color-secondary);
+  --color-secondary-600: color-mix(in oklch, var(--color-secondary) 60%, black 30%);
+  --color-secondary-700: color-mix(in oklch, var(--color-secondary) 70%, black 30%);
+  --color-secondary-800: color-mix(in oklch, var(--color-secondary) 80%, black 30%);
+  --color-secondary-900: color-mix(in oklch, var(--color-secondary) 90%, black 30%);
 
-  --color-accent-50: #fdf4f0;
-  --color-accent-100: #fae6d9;
-  --color-accent-200: #f4ccb2;
-  --color-accent-300: #ecab85;
-  --color-accent-400: #e08856;
-  --color-accent-500: #713A16;
-  --color-accent-600: #5f2f12;
-  --color-accent-700: #4d250f;
-  --color-accent-800: #3f1e0c;
-  --color-accent-900: #351a0a;
-  --color-accent-950: #1b0d05;
+  --color-accent: #713A16;
+  --color-accent-50: color-mix(in oklch, var(--color-accent) 5%, white 30%);
+  --color-accent-100: color-mix(in oklch, var(--color-accent) 10%, white 30%);
+  --color-accent-200: color-mix(in oklch, var(--color-accent) 20%, white 30%);
+  --color-accent-300: color-mix(in oklch, var(--color-accent) 30%, white 30%);
+  --color-accent-400: color-mix(in oklch, var(--color-accent) 40%, white 30%);
+  --color-accent-500: var(--color-accent);
+  --color-accent-600: color-mix(in oklch, var(--color-accent) 60%, black 30%);
+  --color-accent-700: color-mix(in oklch, var(--color-accent) 70%, black 30%);
+  --color-accent-800: color-mix(in oklch, var(--color-accent) 80%, black 30%);
+  --color-accent-900: color-mix(in oklch, var(--color-accent) 90%, black 30%);
 
-  --color-background-50: #F6F4EC;
-  --color-background-100: #f0ede2;
-  --color-background-200: #e1dac5;
-  --color-background-300: #d0c6a8;
-  --color-background-400: #c0b28b;
-  --color-background-500: #b09e6e;
-  --color-background-600: #9d8a5a;
-  --color-background-700: #82714a;
-  --color-background-800: #6a5c3d;
-  --color-background-900: #564c33;
-  --color-background-950: #2d251a;
+  --color-beige: #F6F4EC;
 
   /* Font families */
   --font-family-serif: 'Marcellus', serif;
@@ -67,4 +57,12 @@
   /* Custom shadows */
   --shadow-warm: 0 4px 6px -1px rgb(185 135 57 / 0.1), 0 2px 4px -2px rgb(185 135 57 / 0.1);
   --shadow-warm-lg: 0 10px 15px -3px rgb(185 135 57 / 0.1), 0 4px 6px -4px rgb(185 135 57 / 0.1);
+}
+
+/* Primary Button Styles */
+.btn-primary {
+  @apply bg-main-500 hover:bg-accent text-white;
+  @apply px-6 py-3 rounded-lg font-semibold;
+  @apply transition-colors duration-300;
+  @apply max-w-fit cursor-pointer;
 }
