@@ -13,11 +13,19 @@ import WhyChooseUsSection from '../components/home/WhyChooseUsSection.astro';
 <Layout title="Frequens Neuro Clinic - Estimulación Magnética Transcraneal">
 	<main class="min-h-screen bg-white">
 		<Header />
-		<HeroSection />
-		<AboutSection />
+		<section id="inicio">
+			<HeroSection />
+		</section>
+		<section id="sobre-nosotros">
+			<AboutSection />
+		</section>
 		<WhyChooseUsSection />
-		<TreatmentProcessSection />
-		<TestimonialsSection />
+		<section id="tratamiento">
+			<TreatmentProcessSection />
+		</section>
+		<section id="resultados">
+			<TestimonialsSection />
+		</section>
 		<!-- <CTABanner /> -->
 		<Footer />
 	</main>
