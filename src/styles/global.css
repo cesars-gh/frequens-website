@@ -1,68 +1,106 @@
 @import "tailwindcss";
 
 @theme {
-  /* Color palette */
-  --color-main: #B98739;
-  --color-main-50: color-mix(in oklch, var(--color-main) 5%, white 30%);
-  --color-main-100: color-mix(in oklch, var(--color-main) 10%, white 30%);
-  --color-main-200: color-mix(in oklch, var(--color-main) 20%, white 30%);
-  --color-main-300: color-mix(in oklch, var(--color-main) 30%, white 30%);
-  --color-main-400: color-mix(in oklch, var(--color-main) 40%, white 30%);
-  --color-main-500: var(--color-main);
-  --color-main-600: color-mix(in oklch, var(--color-main) 60%, black 30%);
-  --color-main-700: color-mix(in oklch, var(--color-main) 70%, black 30%);
-  --color-main-800: color-mix(in oklch, var(--color-main) 80%, black 30%);
-  --color-main-900: color-mix(in oklch, var(--color-main) 90%, black 30%);
+	/* Color palette */
+	--color-main: #b98739;
+	--color-main-50: color-mix(in oklch, var(--color-main) 5%, white 30%);
+	--color-main-100: color-mix(in oklch, var(--color-main) 10%, white 30%);
+	--color-main-200: color-mix(in oklch, var(--color-main) 20%, white 30%);
+	--color-main-300: color-mix(in oklch, var(--color-main) 30%, white 30%);
+	--color-main-400: color-mix(in oklch, var(--color-main) 40%, white 30%);
+	--color-main-500: var(--color-main);
+	--color-main-600: color-mix(in oklch, var(--color-main) 60%, black 30%);
+	--color-main-700: color-mix(in oklch, var(--color-main) 70%, black 30%);
+	--color-main-800: color-mix(in oklch, var(--color-main) 80%, black 30%);
+	--color-main-900: color-mix(in oklch, var(--color-main) 90%, black 30%);
 
-  --color-secondary: #6F8F80;
-  --color-secondary-50: color-mix(in oklch, var(--color-secondary) 5%, white 30%);
-  --color-secondary-100: color-mix(in oklch, var(--color-secondary) 10%, white 30%);
-  --color-secondary-200: color-mix(in oklch, var(--color-secondary) 20%, white 30%);
-  --color-secondary-300: color-mix(in oklch, var(--color-secondary) 30%, white 30%);
-  --color-secondary-400: color-mix(in oklch, var(--color-secondary) 40%, white 30%);
-  --color-secondary-500: var(--color-secondary);
-  --color-secondary-600: color-mix(in oklch, var(--color-secondary) 60%, black 30%);
-  --color-secondary-700: color-mix(in oklch, var(--color-secondary) 70%, black 30%);
-  --color-secondary-800: color-mix(in oklch, var(--color-secondary) 80%, black 30%);
-  --color-secondary-900: color-mix(in oklch, var(--color-secondary) 90%, black 30%);
+	--color-secondary: #6f8f80;
+	--color-secondary-50: color-mix(
+		in oklch,
+		var(--color-secondary) 5%,
+		white 30%
+	);
+	--color-secondary-100: color-mix(
+		in oklch,
+		var(--color-secondary) 10%,
+		white 30%
+	);
+	--color-secondary-200: color-mix(
+		in oklch,
+		var(--color-secondary) 20%,
+		white 30%
+	);
+	--color-secondary-300: color-mix(
+		in oklch,
+		var(--color-secondary) 30%,
+		white 30%
+	);
+	--color-secondary-400: color-mix(
+		in oklch,
+		var(--color-secondary) 40%,
+		white 30%
+	);
+	--color-secondary-500: var(--color-secondary);
+	--color-secondary-600: color-mix(
+		in oklch,
+		var(--color-secondary) 60%,
+		black 30%
+	);
+	--color-secondary-700: color-mix(
+		in oklch,
+		var(--color-secondary) 70%,
+		black 30%
+	);
+	--color-secondary-800: color-mix(
+		in oklch,
+		var(--color-secondary) 80%,
+		black 30%
+	);
+	--color-secondary-900: color-mix(
+		in oklch,
+		var(--color-secondary) 90%,
+		black 30%
+	);
 
-  --color-accent: #713A16;
-  --color-accent-50: color-mix(in oklch, var(--color-accent) 5%, white 30%);
-  --color-accent-100: color-mix(in oklch, var(--color-accent) 10%, white 30%);
-  --color-accent-200: color-mix(in oklch, var(--color-accent) 20%, white 30%);
-  --color-accent-300: color-mix(in oklch, var(--color-accent) 30%, white 30%);
-  --color-accent-400: color-mix(in oklch, var(--color-accent) 40%, white 30%);
-  --color-accent-500: var(--color-accent);
-  --color-accent-600: color-mix(in oklch, var(--color-accent) 60%, black 30%);
-  --color-accent-700: color-mix(in oklch, var(--color-accent) 70%, black 30%);
-  --color-accent-800: color-mix(in oklch, var(--color-accent) 80%, black 30%);
-  --color-accent-900: color-mix(in oklch, var(--color-accent) 90%, black 30%);
+	--color-accent: #713a16;
+	--color-accent-50: color-mix(in oklch, var(--color-accent) 5%, white 30%);
+	--color-accent-100: color-mix(in oklch, var(--color-accent) 10%, white 30%);
+	--color-accent-200: color-mix(in oklch, var(--color-accent) 20%, white 30%);
+	--color-accent-300: color-mix(in oklch, var(--color-accent) 30%, white 30%);
+	--color-accent-400: color-mix(in oklch, var(--color-accent) 40%, white 30%);
+	--color-accent-500: var(--color-accent);
+	--color-accent-600: color-mix(in oklch, var(--color-accent) 60%, black 30%);
+	--color-accent-700: color-mix(in oklch, var(--color-accent) 70%, black 30%);
+	--color-accent-800: color-mix(in oklch, var(--color-accent) 80%, black 30%);
+	--color-accent-900: color-mix(in oklch, var(--color-accent) 90%, black 30%);
 
-  --color-beige: #F6F4EC;
+	--color-beige: #f6f4ec;
 
-  /* Font families */
-  --font-family-serif: 'Marcellus', serif;
-  --font-family-sans: 'Nunito Sans', sans-serif;
+	/* Font families */
+	--font-family-serif: "Marcellus", serif;
+	--font-family-sans: "Nunito Sans", sans-serif;
 
-  /* Custom spacing */
-  --spacing-18: 4.5rem;
-  --spacing-88: 22rem;
-  --spacing-128: 32rem;
+	/* Custom spacing */
+	--spacing-18: 4.5rem;
+	--spacing-88: 22rem;
+	--spacing-128: 32rem;
 
-  /* Custom border radius */
-  --radius-2xl: 1rem;
-  --radius-3xl: 1.5rem;
-  --radius-4xl: 2rem;
+	/* Custom border radius */
+	--radius-2xl: 1rem;
+	--radius-3xl: 1.5rem;
+	--radius-4xl: 2rem;
 
-  /* Custom shadows */
-  --shadow-warm: 0 4px 6px -1px rgb(185 135 57 / 0.1), 0 2px 4px -2px rgb(185 135 57 / 0.1);
-  --shadow-warm-lg: 0 10px 15px -3px rgb(185 135 57 / 0.1), 0 4px 6px -4px rgb(185 135 57 / 0.1);
+	/* Custom shadows */
+	--shadow-warm:
+		0 4px 6px -1px rgb(185 135 57 / 0.1), 0 2px 4px -2px rgb(185 135 57 / 0.1);
+	--shadow-warm-lg:
+		0 10px 15px -3px rgb(185 135 57 / 0.1), 0 4px 6px -4px rgb(185 135 57 / 0.1);
 }
 
 /* Primary Button Styles */
 .btn-primary {
-  @apply bg-main-500 hover:bg-accent text-white;
-  @apply px-6 py-3 rounded-lg font-semibold;
-  @apply transition-colors duration-300;
-  @apply max-w-fit cursor-pointer;
+	@apply bg-main-500 hover:bg-accent text-white;
+	@apply px-6 py-3 rounded-lg font-semibold;
+	@apply transition-colors duration-300;
+	@apply max-w-fit cursor-pointer;
 }
