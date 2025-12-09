@@ -1,17 +1,26 @@
+---
+import { Icon } from 'astro-icon/components';
+const { PUBLIC_WHATSAPP_LINK } = import.meta.env;
+---
+
 <section class="bg-linear-to-br from-main-50 to-beige py-12 lg:py-20">
 	<div class="container mx-auto px-4">
 		<div class="max-w-6xl mx-auto">
 			<!-- Top Content - Centered -->
-			<div class="text-center mb-8 lg:mb-12">
+			<div class="mb-8 lg:mb-12 max-w-5xl mx-auto">
 				<!-- Main Headline -->
-				<h1 class="text-4xl lg:text-5xl xl:text-6xl font-bold text-secondary mb-6">
-					Estimulación Magnética Transcraneal (EMT) en Mérida, Yucatán
+				<h1 class="text-3xl text-center lg:text-4xl xl:text-5xl font-bold text-secondary mb-6">
+					Clínica de Estimulación Magnética Transcraneal (EMT) de Mérida
 				</h1>
 
 				<!-- Description -->
-				<p class="text-lg lg:text-xl text-secondary-600 max-w-3xl mx-auto leading-relaxed mb-4">
-					Tratamiento innovador y basado en evidencia científica para depresión, ansiedad, TDAH, autismo y dolor
-					crónico. Terapia no invasiva aprobada por FDA y COFEPRIS con resultados más rápidos y duraderos.
+				<p class="text-lg lg:text-xl text-secondary-600 leading-relaxed mb-4">
+					En <strong>Frequens</strong>&nbsp;ayudamos a niños, adolescentes y adultos a recuperar su bienestar emocional
+					y cognitivo mediante
+					<strong
+						>Estimulación Magnética Transcraneal (EMT)</strong
+					>, una tecnología segura, no invasiva y basada en neurociencia moderna. Nuestro enfoque combina
+					<strong>precisión tecnológica</strong>, personal altamente capacitado y un acompañamiento humano cercano.
 				</p>
 			</div>
 
@@ -88,14 +97,18 @@
 				</div>
 			</div>
 
-			<!-- Bottom Info Box - Full Width -->
-			<!-- <div class="max-w-5xl mx-auto">
-				<div class="bg-secondary-800 text-white p-6 lg:p-8 rounded-xl">
-					<p class="text-sm lg:text-base text-center">
-						Nuestro equipo está conformado por psicólogos y neuropsicólogos especializados en el abordaje integral de trastornos como la depresión, la ansiedad, el autismo, el TDAH, el síndrome de abstinencia y el dolor crónico, entre otros.
-					</p>
-				</div>
-			</div> -->
+			<div class="text-center">
+				<a
+					href={PUBLIC_WHATSAPP_LINK}
+					target="_blank"
+					rel="noopener noreferrer"
+					class="btn-whatsapp">
+					<Icon
+						name="whatsapp"
+						class="w-5 h-5" />
+					Contactar Especialista
+				</a>
+			</div>
 		</div>
 	</div>
 </section>

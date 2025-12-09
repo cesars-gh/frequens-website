@@ -1,3 +1,7 @@
+---
+const { PUBLIC_WHATSAPP_LINK } = import.meta.env;
+---
+
 <header class="bg-white shadow-sm">
 	<div class="container mx-auto px-4 py-4">
 		<div class="flex items-center justify-between">
@@ -8,7 +12,7 @@
 				<img
 					src="/images/logo-horizontal.svg"
 					alt="Frequens"
-					class="md:w-48 w-40 h-auto" >
+					class="w-48 h-auto" >
 			</a>
 
 			<!-- Navigation -->
@@ -21,12 +25,12 @@
 				<a
 					href="#sobre-nosotros"
 					class="text-secondary-700 hover:text-main-600 font-medium"
-					>Sobre Nosotros</a
+					>Nosotros</a
 				>
 				<a
 					href="#tratamiento"
 					class="text-secondary-700 hover:text-main-600 font-medium"
-					>Tratamiento</a
+					>Tratamientos</a
 				>
 				<a
 					href="#resultados"
@@ -37,8 +41,9 @@
 
 			<!-- CTA Button -->
 			<a
-				href="https://wa.me/522205339050"
+				href={PUBLIC_WHATSAPP_LINK}
 				target="_blank"
+				rel="noopener noreferrer"
 				class="btn-primary flex items-center gap-2">
 				<svg
 					class="w-5 h-5"

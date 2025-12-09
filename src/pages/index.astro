@@ -1,12 +1,17 @@
 ---
+import Layout from '../layouts/Layout.astro';
 import AboutSection from '../components/common/AboutSection.astro';
-import Footer from '../components//common/Footer.astro';
+import Footer from '../components/common/Footer.astro';
 import Header from '../components/common/Header.astro';
 import HeroSection from '../components/home/HeroSection.astro';
-import Layout from '../layouts/Layout.astro';
 import BenefitsSection from '../components/common/BenefitsSection.astro';
 import TreatmentProcessSection from '../components/home/TreatmentProcessSection.astro';
 import WhyChooseUsSection from '../components/home/WhyChooseUsSection.astro';
+import MapSection from '../components/common/MapSection.astro';
+import WhatIsEMTSection from '../components/common/WhatIsEMTSection.astro';
+import WhoWeHelpSection from '../components/common/WhoWeHelpSection.astro';
+import WhyChooseFrequensSection from '../components/common/WhyChooseFrequensSection.astro';
+import ScheduleCTASection from '../components/common/ScheduleCTASection.astro';
 ---
 
 <Layout title="Frequens Neuro Clinic - Estimulación Magnética Transcraneal">
@@ -15,6 +20,9 @@ import WhyChooseUsSection from '../components/home/WhyChooseUsSection.astro';
 		<section id="inicio">
 			<HeroSection />
 		</section>
+		<WhatIsEMTSection />
+		<WhoWeHelpSection />
+		<!-- <WhyChooseFrequensSection /> -->
 		<section id="sobre-nosotros">
 			<AboutSection />
 		</section>
@@ -24,6 +32,10 @@ import WhyChooseUsSection from '../components/home/WhyChooseUsSection.astro';
 		</section>
 		<section id="resultados">
 			<BenefitsSection />
+		</section>
+		<ScheduleCTASection sectionClass="my-20 max-w-6xl mx-auto" />
+		<section id="ubicacion">
+			<MapSection />
 		</section>
 		<Footer />
 	</main>

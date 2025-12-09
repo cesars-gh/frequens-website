@@ -99,8 +99,14 @@
 
 /* Primary Button Styles */
 .btn-primary {
-	@apply bg-main-500 hover:bg-accent text-white;
+	@apply bg-main hover:bg-secondary-600 text-white;
 	@apply px-6 py-3 rounded-lg font-semibold;
 	@apply transition-colors duration-300;
 	@apply max-w-fit cursor-pointer;
+}
+
+/* WhatsApp CTA Button */
+.btn-whatsapp {
+	@apply bg-secondary text-white hover:bg-secondary-600 px-8 py-3 rounded-lg;
+	@apply font-semibold transition-colors duration-300 inline-flex items-center gap-2;
 }

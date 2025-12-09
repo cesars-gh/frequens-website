@@ -1,0 +1,22 @@
+---
+import { Icon } from 'astro-icon/components';
+const { sectionClass = 'py-20' } = Astro.props;
+const { PUBLIC_CALENDLY_URL } = import.meta.env;
+---
+
+<section class={`bg-secondary-800 text-white p-8 rounded-xl text-center ${sectionClass}`}>
+	<h3 class="text-2xl font-bold mb-4">¿Te gustaría comenzar tu tratamiento con EMT?</h3>
+	<p class="text-lg mb-6 text-white">
+		Agenda tu evaluación inicial y descubre si eres candidato para este tratamiento innovador
+	</p>
+	<a
+		href={PUBLIC_CALENDLY_URL}
+		target="_blank"
+		rel="noopener noreferrer"
+		class="btn-primary inline-flex items-center gap-2">
+		<Icon
+			name="calendar"
+			class="w-5 h-5" />
+		Agendar Evaluación
+	</a>
+</section>

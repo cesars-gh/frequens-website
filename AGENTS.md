@@ -29,4 +29,6 @@ TailwindCSS is used for styling, try to use Tailwind's CSS classes most of the t
 *Buidling the Website*
 `pnpm build`
 
+*Format the code*
+`pnpm format`
 
