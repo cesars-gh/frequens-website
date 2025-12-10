@@ -13,6 +13,22 @@ Background: #F6F4EC
 
 You can find the CSS classes for these colors in `styles/global.css`.
 
+## Icons
+
+If you create a new icon, add it to the `/src/icons` folder as a SVG file to be reused later.
+If the code you generate includes SVG code for an existing icon, use the icon component and the existing icon in SVG:
+
+```
+---
+import { Icon } from 'astro-icon/components';
+---
+...
+  <Icon
+    name="chevron-down"
+    class="w-4 h-4 transition-transform duration-200" />
+```
+
+
 ## Development
 
 The project uses Astro to build all the pages. Try to build reusing components as much as possible.
