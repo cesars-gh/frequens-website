@@ -3,16 +3,14 @@ import { Icon } from 'astro-icon/components';
 const { PUBLIC_WHATSAPP_LINK, PUBLIC_CALENDLY_URL } = import.meta.env;
 
 const navLinks = [
-	{ href: "/", label: "Inicio" },
-	{ href: "/#sobre-nosotros", label: "Nosotros" },
-	{ href: "/#resultados", label: "Resultados" },
+	{ href: '/', label: 'Inicio' },
+	{ href: '/#sobre-nosotros', label: 'Nosotros' },
+	{ href: '/#resultados', label: 'Resultados' },
 ];
 
 const tratamientosDropdown = {
-	label: "Tratamientos",
-	items: [
-		{ href: "/emt-tdah", label: "EMT para TDAH" },
-	],
+	label: 'Tratamientos',
+	items: [{ href: '/emt-tdah', label: 'EMT para TDAH' }],
 };
 ---
 
@@ -20,12 +18,13 @@ const tratamientosDropdown = {
 	<div class="container mx-auto px-4 py-4">
 		<div class="flex items-center justify-between">
 			<!-- Logo -->
-			<a href="/" class="flex items-center">
+			<a
+				href="/"
+				class="flex items-center">
 				<img
 					src="/images/logo-horizontal.svg"
 					alt="Frequens"
-					class="w-48 h-auto"
-				/>
+					class="w-48 h-auto" >
 			</a>
 
 			<!-- Desktop Navigation -->
@@ -40,27 +39,28 @@ const tratamientosDropdown = {
 						</a>
 					))
 				}
-				
+
 				<!-- Tratamientos Dropdown -->
-				<div class="relative" id="tratamientos-dropdown">
+				<div
+					class="relative"
+					id="tratamientos-dropdown">
 					<button
 						type="button"
 						class="flex items-center gap-1 text-secondary-700 hover:text-main-600 font-medium transition-colors"
 						id="tratamientos-button"
 						aria-expanded="false"
-						aria-haspopup="true"
-					>
+						aria-haspopup="true">
 						{tratamientosDropdown.label}
-						<svg class="w-4 h-4 transition-transform duration-200" id="tratamientos-arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-						</svg>
+						<Icon
+							name="chevron-down"
+							class="w-4 h-4 transition-transform duration-200"
+							id="tratamientos-arrow" />
 					</button>
-					
+
 					<!-- Dropdown Menu -->
 					<div
 						id="tratamientos-menu"
-						class="absolute top-full left-0 mt-2 w-48 bg-white rounded-lg shadow-lg border border-gray-100 py-2 opacity-0 invisible transform -translate-y-2 transition-all duration-200"
-					>
+						class="absolute top-full left-0 mt-2 w-48 bg-white rounded-lg shadow-lg border border-gray-100 py-2 opacity-0 invisible transform -translate-y-2 transition-all duration-200">
 						{
 							tratamientosDropdown.items.map((item) => (
 								<a
@@ -73,7 +73,7 @@ const tratamientosDropdown = {
 						}
 					</div>
 				</div>
-				
+
 				{
 					navLinks.slice(2).map((link) => (
 						<a
@@ -92,8 +92,7 @@ const tratamientosDropdown = {
 					href={PUBLIC_CALENDLY_URL}
 					target="_blank"
 					rel="noopener noreferrer"
-					class="btn-primary hidden sm:flex items-center gap-2"
-				>
+					class="btn-primary hidden sm:flex items-center gap-2">
 					<Icon
 						name="calendar"
 						class="w-5 h-5" />
@@ -105,17 +104,10 @@ const tratamientosDropdown = {
 					id="mobile-menu-button"
 					class="lg:hidden flex flex-col justify-center items-center w-10 h-10 rounded-lg hover:bg-gray-100 transition-colors"
 					aria-label="Abrir menú"
-					aria-expanded="false"
-				>
-					<span
-						class="hamburger-line w-6 h-0.5 bg-secondary rounded-full transition-all duration-300"
-					></span>
-					<span
-						class="hamburger-line w-6 h-0.5 bg-secondary rounded-full transition-all duration-300 mt-1.5"
-					></span>
-					<span
-						class="hamburger-line w-6 h-0.5 bg-secondary rounded-full transition-all duration-300 mt-1.5"
-					></span>
+					aria-expanded="false">
+					<span class="hamburger-line w-6 h-0.5 bg-secondary rounded-full transition-all duration-300"></span>
+					<span class="hamburger-line w-6 h-0.5 bg-secondary rounded-full transition-all duration-300 mt-1.5"></span>
+					<span class="hamburger-line w-6 h-0.5 bg-secondary rounded-full transition-all duration-300 mt-1.5"></span>
 				</button>
 			</div>
 		</div>
@@ -124,40 +116,26 @@ const tratamientosDropdown = {
 	<!-- Mobile Menu Overlay -->
 	<div
 		id="mobile-menu-overlay"
-		class="fixed inset-0 bg-black/50 opacity-0 invisible transition-opacity duration-300 lg:hidden"
-	>
-	</div>
+		class="fixed inset-0 bg-black/50 opacity-0 invisible transition-opacity duration-300 lg:hidden"></div>
 
 	<!-- Mobile Menu Panel -->
 	<div
 		id="mobile-menu"
-		class="fixed top-0 right-0 h-full w-80 max-w-[85vw] bg-white shadow-xl transform translate-x-full transition-transform duration-300 ease-out lg:hidden"
-	>
+		class="fixed top-0 right-0 h-full w-80 max-w-[85vw] bg-white shadow-xl transform translate-x-full transition-transform duration-300 ease-out lg:hidden">
 		<div class="flex flex-col h-full">
 			<!-- Mobile Menu Header -->
 			<div class="flex items-center justify-between p-4 border-b border-gray-100">
 				<img
 					src="/images/logo-horizontal.svg"
 					alt="Frequens"
-					class="w-36 h-auto"
-				/>
+					class="w-36 h-auto" >
 				<button
 					id="mobile-menu-close"
 					class="w-10 h-10 flex items-center justify-center rounded-lg hover:bg-gray-100 transition-colors"
-					aria-label="Cerrar menú"
-				>
-					<svg
-						class="w-6 h-6 text-secondary"
-						fill="none"
-						stroke="currentColor"
-						viewBox="0 0 24 24"
-					>
-						<path
-							stroke-linecap="round"
-							stroke-linejoin="round"
-							stroke-width="2"
-							d="M6 18L18 6M6 6l12 12"></path>
-					</svg>
+					aria-label="Cerrar menú">
+					<Icon
+						name="close"
+						class="w-6 h-6 text-secondary" />
 				</button>
 			</div>
 
@@ -176,21 +154,23 @@ const tratamientosDropdown = {
 							</li>
 						))
 					}
-					
+
 					<!-- Mobile Tratamientos Dropdown -->
 					<li>
 						<button
 							type="button"
 							id="mobile-tratamientos-button"
 							class="w-full flex items-center justify-between px-4 py-3 text-lg text-secondary-700 hover:text-main-600 hover:bg-main-50 rounded-lg font-medium transition-colors"
-							aria-expanded="false"
-						>
+							aria-expanded="false">
 							{tratamientosDropdown.label}
-							<svg class="w-5 h-5 transition-transform duration-200" id="mobile-tratamientos-arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-							</svg>
+							<Icon
+								name="chevron-down"
+								class="w-5 h-5 transition-transform duration-200"
+								id="mobile-tratamientos-arrow" />
 						</button>
-						<ul id="mobile-tratamientos-menu" class="hidden mt-1 ml-4 space-y-1 border-l-2 border-main-200">
+						<ul
+							id="mobile-tratamientos-menu"
+							class="hidden mt-1 ml-4 space-y-1 border-l-2 border-main-200">
 							{
 								tratamientosDropdown.items.map((item) => (
 									<li>
@@ -205,7 +185,7 @@ const tratamientosDropdown = {
 							}
 						</ul>
 					</li>
-					
+
 					{
 						navLinks.slice(2).map((link) => (
 							<li>
@@ -227,8 +207,7 @@ const tratamientosDropdown = {
 					href={PUBLIC_WHATSAPP_LINK}
 					target="_blank"
 					rel="noopener noreferrer"
-					class="btn-primary w-full flex items-center justify-center gap-2"
-				>
+					class="btn-primary w-full flex items-center justify-center gap-2">
 					<Icon
 						name="calendar"
 						class="w-5 h-5" />
@@ -240,140 +219,140 @@ const tratamientosDropdown = {
 </header>
 
 <style>
-	/* Hamburger animation when menu is open */
-	.menu-open #mobile-menu-button .hamburger-line:nth-child(1) {
-		transform: translateY(8px) rotate(45deg);
-	}
+/* Hamburger animation when menu is open */
+.menu-open #mobile-menu-button .hamburger-line:nth-child(1) {
+	transform: translateY(8px) rotate(45deg);
+}
 
-	.menu-open #mobile-menu-button .hamburger-line:nth-child(2) {
-		opacity: 0;
-	}
+.menu-open #mobile-menu-button .hamburger-line:nth-child(2) {
+	opacity: 0;
+}
 
-	.menu-open #mobile-menu-button .hamburger-line:nth-child(3) {
-		transform: translateY(-8px) rotate(-45deg);
-	}
+.menu-open #mobile-menu-button .hamburger-line:nth-child(3) {
+	transform: translateY(-8px) rotate(-45deg);
+}
 </style>
 
 <script>
-	const initMobileMenu = () => {
-		const menuButton = document.getElementById("mobile-menu-button");
-		const menuClose = document.getElementById("mobile-menu-close");
-		const mobileMenu = document.getElementById("mobile-menu");
-		const menuOverlay = document.getElementById("mobile-menu-overlay");
-		const mobileNavLinks = document.querySelectorAll(".mobile-nav-link");
-		const header = document.querySelector("header");
+const initMobileMenu = () => {
+	const menuButton = document.getElementById('mobile-menu-button');
+	const menuClose = document.getElementById('mobile-menu-close');
+	const mobileMenu = document.getElementById('mobile-menu');
+	const menuOverlay = document.getElementById('mobile-menu-overlay');
+	const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+	const header = document.querySelector('header');
 
-		const openMenu = () => {
-			document.body.style.overflow = "hidden";
-			header?.classList.add("menu-open");
-			mobileMenu?.classList.remove("translate-x-full");
-			menuOverlay?.classList.remove("opacity-0", "invisible");
-			menuOverlay?.classList.add("opacity-100", "visible");
-			menuButton?.setAttribute("aria-expanded", "true");
-		};
-
-		const closeMenu = () => {
-			document.body.style.overflow = "";
-			header?.classList.remove("menu-open");
-			mobileMenu?.classList.add("translate-x-full");
-			menuOverlay?.classList.add("opacity-0", "invisible");
-			menuOverlay?.classList.remove("opacity-100", "visible");
-			menuButton?.setAttribute("aria-expanded", "false");
-		};
-
-		menuButton?.addEventListener("click", openMenu);
-		menuClose?.addEventListener("click", closeMenu);
-		menuOverlay?.addEventListener("click", closeMenu);
-
-		// Close menu when clicking on nav links
-		mobileNavLinks.forEach((link) => {
-			link.addEventListener("click", closeMenu);
-		});
-
-		// Close menu on escape key
-		document.addEventListener("keydown", (e) => {
-			if (e.key === "Escape") {
-				closeMenu();
-			}
-		});
-
-		// Close menu on window resize to desktop
-		window.addEventListener("resize", () => {
-			if (window.innerWidth >= 1024) {
-				closeMenu();
-			}
-		});
+	const openMenu = () => {
+		document.body.style.overflow = 'hidden';
+		header?.classList.add('menu-open');
+		mobileMenu?.classList.remove('translate-x-full');
+		menuOverlay?.classList.remove('opacity-0', 'invisible');
+		menuOverlay?.classList.add('opacity-100', 'visible');
+		menuButton?.setAttribute('aria-expanded', 'true');
 	};
 
-	const initTratamientosDropdown = () => {
-		// Desktop dropdown
-		const dropdown = document.getElementById("tratamientos-dropdown");
-		const button = document.getElementById("tratamientos-button");
-		const menu = document.getElementById("tratamientos-menu");
-		const arrow = document.getElementById("tratamientos-arrow");
-
-		const openDropdown = () => {
-			menu?.classList.remove("opacity-0", "invisible", "-translate-y-2");
-			menu?.classList.add("opacity-100", "visible", "translate-y-0");
-			arrow?.classList.add("rotate-180");
-			button?.setAttribute("aria-expanded", "true");
-		};
-
-		const closeDropdown = () => {
-			menu?.classList.add("opacity-0", "invisible", "-translate-y-2");
-			menu?.classList.remove("opacity-100", "visible", "translate-y-0");
-			arrow?.classList.remove("rotate-180");
-			button?.setAttribute("aria-expanded", "false");
-		};
-
-		// Toggle on click
-		button?.addEventListener("click", (e) => {
-			e.stopPropagation();
-			const isOpen = button.getAttribute("aria-expanded") === "true";
-			if (isOpen) {
-				closeDropdown();
-			} else {
-				openDropdown();
-			}
-		});
-
-		// Open on hover (desktop)
-		dropdown?.addEventListener("mouseenter", openDropdown);
-		dropdown?.addEventListener("mouseleave", closeDropdown);
-
-		// Close when clicking outside
-		document.addEventListener("click", (e) => {
-			if (!dropdown?.contains(e.target as Node)) {
-				closeDropdown();
-			}
-		});
-
-		// Mobile dropdown
-		const mobileButton = document.getElementById("mobile-tratamientos-button");
-		const mobileMenu = document.getElementById("mobile-tratamientos-menu");
-		const mobileArrow = document.getElementById("mobile-tratamientos-arrow");
-
-		mobileButton?.addEventListener("click", () => {
-			const isOpen = mobileButton.getAttribute("aria-expanded") === "true";
-			if (isOpen) {
-				mobileMenu?.classList.add("hidden");
-				mobileArrow?.classList.remove("rotate-180");
-				mobileButton.setAttribute("aria-expanded", "false");
-			} else {
-				mobileMenu?.classList.remove("hidden");
-				mobileArrow?.classList.add("rotate-180");
-				mobileButton.setAttribute("aria-expanded", "true");
-			}
-		});
+	const closeMenu = () => {
+		document.body.style.overflow = '';
+		header?.classList.remove('menu-open');
+		mobileMenu?.classList.add('translate-x-full');
+		menuOverlay?.classList.add('opacity-0', 'invisible');
+		menuOverlay?.classList.remove('opacity-100', 'visible');
+		menuButton?.setAttribute('aria-expanded', 'false');
 	};
 
-	// Initialize on page load
+	menuButton?.addEventListener('click', openMenu);
+	menuClose?.addEventListener('click', closeMenu);
+	menuOverlay?.addEventListener('click', closeMenu);
+
+	// Close menu when clicking on nav links
+	mobileNavLinks.forEach((link) => {
+		link.addEventListener('click', closeMenu);
+	});
+
+	// Close menu on escape key
+	document.addEventListener('keydown', (e) => {
+		if (e.key === 'Escape') {
+			closeMenu();
+		}
+	});
+
+	// Close menu on window resize to desktop
+	window.addEventListener('resize', () => {
+		if (window.innerWidth >= 1024) {
+			closeMenu();
+		}
+	});
+};
+
+const initTratamientosDropdown = () => {
+	// Desktop dropdown
+	const dropdown = document.getElementById('tratamientos-dropdown');
+	const button = document.getElementById('tratamientos-button');
+	const menu = document.getElementById('tratamientos-menu');
+	const arrow = document.getElementById('tratamientos-arrow');
+
+	const openDropdown = () => {
+		menu?.classList.remove('opacity-0', 'invisible', '-translate-y-2');
+		menu?.classList.add('opacity-100', 'visible', 'translate-y-0');
+		arrow?.classList.add('rotate-180');
+		button?.setAttribute('aria-expanded', 'true');
+	};
+
+	const closeDropdown = () => {
+		menu?.classList.add('opacity-0', 'invisible', '-translate-y-2');
+		menu?.classList.remove('opacity-100', 'visible', 'translate-y-0');
+		arrow?.classList.remove('rotate-180');
+		button?.setAttribute('aria-expanded', 'false');
+	};
+
+	// Toggle on click
+	button?.addEventListener('click', (e) => {
+		e.stopPropagation();
+		const isOpen = button.getAttribute('aria-expanded') === 'true';
+		if (isOpen) {
+			closeDropdown();
+		} else {
+			openDropdown();
+		}
+	});
+
+	// Open on hover (desktop)
+	dropdown?.addEventListener('mouseenter', openDropdown);
+	dropdown?.addEventListener('mouseleave', closeDropdown);
+
+	// Close when clicking outside
+	document.addEventListener('click', (e) => {
+		if (!dropdown?.contains(e.target as Node)) {
+			closeDropdown();
+		}
+	});
+
+	// Mobile dropdown
+	const mobileButton = document.getElementById('mobile-tratamientos-button');
+	const mobileMenu = document.getElementById('mobile-tratamientos-menu');
+	const mobileArrow = document.getElementById('mobile-tratamientos-arrow');
+
+	mobileButton?.addEventListener('click', () => {
+		const isOpen = mobileButton.getAttribute('aria-expanded') === 'true';
+		if (isOpen) {
+			mobileMenu?.classList.add('hidden');
+			mobileArrow?.classList.remove('rotate-180');
+			mobileButton.setAttribute('aria-expanded', 'false');
+		} else {
+			mobileMenu?.classList.remove('hidden');
+			mobileArrow?.classList.add('rotate-180');
+			mobileButton.setAttribute('aria-expanded', 'true');
+		}
+	});
+};
+
+// Initialize on page load
+initMobileMenu();
+initTratamientosDropdown();
+
+// Re-initialize on Astro page transitions
+document.addEventListener('astro:after-swap', () => {
 	initMobileMenu();
 	initTratamientosDropdown();
-
-	// Re-initialize on Astro page transitions
-	document.addEventListener("astro:after-swap", () => {
-		initMobileMenu();
-		initTratamientosDropdown();
-	});
+});
 </script>
