@@ -1,0 +1,34 @@
+---
+import { Icon } from 'astro-icon/components';
+const { PUBLIC_CALENDLY_URL } = import.meta.env;
+---
+
+<section class="py-20 bg-secondary-800">
+	<div class="container mx-auto px-4">
+		<div class="max-w-4xl mx-auto text-center">
+			<h2 class="text-3xl lg:text-4xl font-bold text-white mb-6">Da el paso: recupera el enfoque y la calma</h2>
+
+			<p class="text-lg text-white mb-8 leading-relaxed">
+				La valoración inicial es <strong>gratuita</strong>, sin compromiso. Queremos conocerte, entender lo que estás
+				viviendo y ver si la EMT es la solución adecuada para ti o para tu hijo.
+			</p>
+
+			<a
+				href={PUBLIC_CALENDLY_URL}
+				target="_blank"
+				rel="noopener noreferrer"
+				class="btn-primary inline-flex items-center gap-2 text-lg">
+				<Icon
+					name="calendar"
+					class="w-5 h-5" />
+				Agendar mi valoración gratuita
+			</a>
+
+			<p class="text-sm text-gray-300 mt-8 max-w-2xl mx-auto">
+				En Frequens, combinamos tecnología avanzada con calidez humana.
+				<br />
+				Este no es solo un tratamiento: es un cambio real para tu vida y la de tu familia.
+			</p>
+		</div>
+	</div>
+</section>
