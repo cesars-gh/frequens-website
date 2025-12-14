@@ -2,5 +2,33 @@
 	"editor.codeActionsOnSave": {
 		"source.organizeImports.biome": "explicit",
 		"source.fixAll.biome": "explicit"
+	},
+	"workbench.colorCustomizations": {
+		"titleBar.activeBackground": "#B98739",
+		"titleBar.activeForeground": "#FFFFFF",
+		"titleBar.inactiveBackground": "#9a7130",
+		"titleBar.inactiveForeground": "#F6F4EC",
+		"activityBar.background": "#6F8F80",
+		"activityBar.foreground": "#FFFFFF",
+		"activityBar.activeBorder": "#B98739",
+		"activityBarBadge.background": "#B98739",
+		"activityBarBadge.foreground": "#FFFFFF",
+		"statusBar.background": "#6F8F80",
+		"statusBar.foreground": "#FFFFFF",
+		"statusBar.debuggingBackground": "#713A16",
+		"statusBar.debuggingForeground": "#FFFFFF",
+		"statusBar.noFolderBackground": "#5a7568",
+		"sideBar.border": "#B98739",
+		"panel.border": "#B98739",
+		"tab.activeBorder": "#B98739",
+		"tab.activeBorderTop": "#B98739",
+		"editorGroupHeader.tabsBorder": "#6F8F80",
+		"button.background": "#B98739",
+		"button.foreground": "#FFFFFF",
+		"button.hoverBackground": "#9a7130",
+		"progressBar.background": "#B98739",
+		"focusBorder": "#B98739",
+		"textLink.foreground": "#B98739",
+		"textLink.activeForeground": "#6F8F80"
 	}
 }
