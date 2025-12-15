@@ -1,5 +1,6 @@
 ---
 import { Icon } from 'astro-icon/components';
+import { TREATMENTS_LINKS } from '../../data/treatments';
 const { PUBLIC_WHATSAPP_LINK, PUBLIC_CALENDLY_URL } = import.meta.env;
 
 const navLinks = [
@@ -10,10 +11,7 @@ const navLinks = [
 
 const tratamientosDropdown = {
 	label: 'Tratamientos',
-	items: [
-		{ href: '/emt-tdah', label: 'EMT para TDAH' },
-		{ href: '/emt-autismo', label: 'EMT para Autismo' },
-	],
+	items: [...TREATMENTS_LINKS],
 };
 ---
 

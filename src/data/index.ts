@@ -5,15 +5,18 @@
 
 export { tdahContent } from './tdah';
 export { autismoContent } from './autismo';
-// Future landing pages:
-// export { adiccionesContent } from './adicciones';
-// export { dolorContent } from './dolor';
-// export { ansiedadContent } from './ansiedad';
-// export { depresionContent } from './depresion';
+export { adiccionesContent } from './adicciones';
+export { dolorContent } from './dolor';
+export { ansiedadContent } from './ansiedad';
+export { depresionContent } from './depresion';
 
 import type { LandingPageContent } from '../types/landing';
 import { tdahContent } from './tdah';
 import { autismoContent } from './autismo';
+import { adiccionesContent } from './adicciones';
+import { dolorContent } from './dolor';
+import { ansiedadContent } from './ansiedad';
+import { depresionContent } from './depresion';
 
 export type LandingSlug =
 	| 'tdah'
@@ -23,9 +26,13 @@ export type LandingSlug =
 	| 'ansiedad'
 	| 'depresion';
 
-const landingContentMap: Partial<Record<LandingSlug, LandingPageContent>> = {
+const landingContentMap: Record<LandingSlug, LandingPageContent> = {
 	tdah: tdahContent,
 	autismo: autismoContent,
+	adicciones: adiccionesContent,
+	dolor: dolorContent,
+	ansiedad: ansiedadContent,
+	depresion: depresionContent,
 };
 
 export const getLandingContent = (

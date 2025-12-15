@@ -1,0 +1,43 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/common/Header.astro';
+import Footer from '../components/common/Footer.astro';
+import MapSection from '../components/common/MapSection.astro';
+import HeroLandingSlider from '../components/common/HeroLandingSlider.astro';
+
+import HeroSection from '../components/landings/HeroSection.astro';
+import WhyEMTSection from '../components/landings/WhyEMTSection.astro';
+import HowEMTWorksSection from '../components/landings/HowEMTWorksSection.astro';
+import WhoCanBenefitSection from '../components/landings/WhoCanBenefitSection.astro';
+import BenefitsSection from '../components/landings/BenefitsSection.astro';
+import ScienceEvidenceSection from '../components/landings/ScienceEvidenceSection.astro';
+import ProcessSection from '../components/landings/ProcessSection.astro';
+import FAQSection from '../components/landings/FAQSection.astro';
+import TestimonialsSection from '../components/landings/TestimonialsSection.astro';
+import FinalCTASection from '../components/landings/FinalCTASection.astro';
+
+import { adiccionesContent } from '../data';
+---
+
+<Layout
+	title={adiccionesContent.meta.title}
+	description={adiccionesContent.meta.description}
+	keywords={adiccionesContent.meta.keywords}>
+	<main class="min-h-screen bg-white">
+		<Header />
+		<HeroSection content={adiccionesContent.hero}>
+			<HeroLandingSlider />
+		</HeroSection>
+		<WhyEMTSection content={adiccionesContent.whyEMT} />
+		<HowEMTWorksSection content={adiccionesContent.howItWorks} />
+		<WhoCanBenefitSection content={adiccionesContent.whoCanBenefit} />
+		<BenefitsSection content={adiccionesContent.benefits} />
+		<ScienceEvidenceSection content={adiccionesContent.scienceEvidence} />
+		<ProcessSection content={adiccionesContent.process} />
+		<FAQSection content={adiccionesContent.faq} />
+		<TestimonialsSection content={adiccionesContent.testimonials} />
+		<FinalCTASection content={adiccionesContent.finalCTA} />
+		<MapSection />
+		<Footer />
+	</main>
+</Layout>
