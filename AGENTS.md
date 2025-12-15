@@ -48,3 +48,31 @@ TailwindCSS is used for styling, try to use Tailwind's CSS classes most of the t
 *Format the code*
 `pnpm format`
 
+## How to Create a New Landing Page
+
+1. Create content file at src/data/<landing-name>.ts. Example:
+```
+import type { LandingPageContent } from '../types/landing';
+export const autismoContent: LandingPageContent = {
+  meta: { title: '...', description: '...', keywords: '...' },
+  hero: { headline: '...', description: '...', infoBoxes: [...] },
+  // ... fill in all sections
+};
+```
+
+2. Export from index in src/data/index.ts:
+```
+export { autismoContent } from './autismo';
+```
+
+3. Create the page at src/pages/emt-<landing-name>.astro:
+```
+---
+import { autismoContent } from '../data';
+// ... same component imports
+---
+<Layout title={autismoContent.meta.title} ...>
+  <HeroSection content={autismoContent.hero}>...</HeroSection>
+  <!-- ... all sections with autismoContent -->
+</Layout>
+```

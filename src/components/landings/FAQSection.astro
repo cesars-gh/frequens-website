@@ -1,0 +1,39 @@
+---
+import { Icon } from 'astro-icon/components';
+import type { FAQSectionContent } from '../../types/landing';
+
+type Props = {
+	content: FAQSectionContent;
+};
+
+const { content } = Astro.props;
+---
+
+<section class="py-20 bg-white">
+	<div class="container mx-auto px-4">
+		<div class="max-w-4xl mx-auto">
+			<div class="text-center mb-12">
+				<h2 class="text-3xl lg:text-4xl font-bold text-secondary-800 mb-4">{content.title}</h2>
+			</div>
+
+			<div class="space-y-4">
+				{
+					content.faqs.map((faq) => (
+						<details class="group bg-gray-50 rounded-xl">
+							<summary class="flex justify-between items-center cursor-pointer p-6 text-lg font-semibold text-secondary-800">
+								{faq.question}
+								<Icon
+									name="chevron-down"
+									class="w-5 h-5 text-main-600 transition-transform group-open:rotate-180"
+								/>
+							</summary>
+							<div class="px-6 pb-6 text-secondary-600">
+								<p>{faq.answer}</p>
+							</div>
+						</details>
+					))
+				}
+			</div>
+		</div>
+	</div>
+</section>

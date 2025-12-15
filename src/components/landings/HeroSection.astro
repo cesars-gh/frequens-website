@@ -1,0 +1,48 @@
+---
+import { Icon } from 'astro-icon/components';
+import type { HeroSectionContent } from '../../types/landing';
+
+type Props = {
+	content: HeroSectionContent;
+};
+
+const { content } = Astro.props;
+---
+
+<section class="bg-linear-to-br from-main-50 to-beige py-12 lg:py-20">
+	<div class="container mx-auto px-4">
+		<div class="max-w-6xl mx-auto">
+			<!-- Top Content - Centered -->
+			<div class="mb-8 lg:mb-12 max-w-5xl mx-auto text-center">
+				<!-- Main Headline -->
+				<h1 class="text-3xl lg:text-4xl xl:text-5xl font-bold text-secondary mb-6">{content.headline}</h1>
+
+				<!-- Description -->
+				<p class="text-lg lg:text-xl text-secondary-600 leading-relaxed mb-8 max-w-3xl mx-auto">
+					{content.description}
+				</p>
+			</div>
+
+			<!-- Centered Hero Section -->
+			<slot />
+
+			<!-- Info Boxes - Centered Grid -->
+			<div class="grid md:grid-cols-3 gap-6 lg:gap-8 max-w-6xl mx-auto">
+				{
+					content.infoBoxes.map((box) => (
+						<div class="bg-secondary-200 p-6 rounded-xl">
+							<div class="w-16 h-16 bg-main-500 rounded-full mx-auto mb-4 flex items-center justify-center">
+								<Icon
+									name={box.icon}
+									class="w-8 h-8 text-white"
+								/>
+							</div>
+							<h3 class="font-semibold text-main-900 mb-2 text-center">{box.title}</h3>
+							<p class="text-sm text-secondary-600 text-center">{box.description}</p>
+						</div>
+					))
+				}
+			</div>
+		</div>
+	</div>
+</section>

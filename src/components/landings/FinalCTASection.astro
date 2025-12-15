@@ -1,0 +1,39 @@
+---
+import { Icon } from 'astro-icon/components';
+import type { FinalCTASectionContent } from '../../types/landing';
+
+const { PUBLIC_CALENDLY_URL } = import.meta.env;
+
+type Props = {
+	content: FinalCTASectionContent;
+};
+
+const { content } = Astro.props;
+---
+
+<section class="py-20 bg-secondary-800">
+	<div class="container mx-auto px-4">
+		<div class="max-w-4xl mx-auto text-center">
+			<h2 class="text-3xl lg:text-4xl font-bold text-white mb-6">{content.title}</h2>
+
+			<p
+				class="text-lg text-white mb-8 leading-relaxed"
+				set:html={content.description} />
+
+			<a
+				href={PUBLIC_CALENDLY_URL}
+				target="_blank"
+				rel="noopener noreferrer"
+				class="btn-primary inline-flex items-center gap-2 text-lg">
+				<Icon
+					name="calendar"
+					class="w-5 h-5" />
+				{content.ctaText}
+			</a>
+
+			<p
+				class="text-sm text-gray-300 mt-8 max-w-2xl mx-auto"
+				set:html={content.footnote} />
+		</div>
+	</div>
+</section>

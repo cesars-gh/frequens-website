@@ -1,0 +1,32 @@
+---
+import type { WhySectionContent } from '../../types/landing';
+
+type Props = {
+	content: WhySectionContent;
+};
+
+const { content } = Astro.props;
+---
+
+<section class="py-20 bg-white">
+	<div class="container mx-auto px-4">
+		<div class="max-w-4xl mx-auto">
+			<h2 class="text-3xl lg:text-4xl font-bold text-secondary-800 mb-8 text-center">{content.title}</h2>
+
+			<div class="space-y-6 text-lg text-secondary-600 leading-relaxed">
+				{content.paragraphs.map((paragraph) => <p set:html={paragraph} />)}
+			</div>
+
+			<div class="mt-10 grid md:grid-cols-3 gap-6">
+				{
+					content.highlights.map((highlight) => (
+						<div class="bg-main-50 p-6 rounded-xl border-l-4 border-main-500">
+							<h3 class="font-semibold text-secondary-800 mb-2">{highlight.title}</h3>
+							<p class="text-secondary-600 text-sm">{highlight.description}</p>
+						</div>
+					))
+				}
+			</div>
+		</div>
+	</div>
+</section>
