@@ -14,13 +14,21 @@ export { tdahContent } from './tdah';
 import type { LandingPageContent } from '../../types/landing';
 import { tdahContent } from './tdah';
 
-export type LandingSlug = 'tdah' | 'autismo' | 'adicciones' | 'dolor' | 'ansiedad' | 'depresion';
+export type LandingSlug =
+	| 'tdah'
+	| 'autismo'
+	| 'adicciones'
+	| 'dolor'
+	| 'ansiedad'
+	| 'depresion';
 
 const landingContentMap: Partial<Record<LandingSlug, LandingPageContent>> = {
 	tdah: tdahContent,
 	// Add more as they are created
 };
 
-export const getLandingContent = (slug: LandingSlug): LandingPageContent | undefined => {
+export const getLandingContent = (
+	slug: LandingSlug,
+): LandingPageContent | undefined => {
 	return landingContentMap[slug];
 };

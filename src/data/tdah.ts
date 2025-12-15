@@ -40,19 +40,19 @@ export const tdahContent: LandingPageContent = {
 		],
 		highlights: [
 			{
-				icon: 'focus',
+				icon: 'lightbulb',
 				title: 'Reducción de inatención',
 				description:
 					'El cambio más robusto señalado en la literatura: muchas personas reportan poder concentrarse más tiempo en actividades escolares y cotidianas.',
 			},
 			{
-				icon: 'control',
+				icon: 'shield-check',
 				title: 'Mejor autocontrol',
 				description:
 					'Avances en autocontrol y una menor impulsividad, facilitando la convivencia familiar y social.',
 			},
 			{
-				icon: 'academic',
+				icon: 'trending-up',
 				title: 'Rendimiento académico',
 				description:
 					'Mejora en el rendimiento académico y comportamiento diario visible en pacientes que responden al tratamiento.',

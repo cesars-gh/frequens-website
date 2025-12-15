@@ -4,8 +4,8 @@
  */
 
 export { tdahContent } from './tdah';
+export { autismoContent } from './autismo';
 // Future landing pages:
-// export { autismoContent } from './autismo';
 // export { adiccionesContent } from './adicciones';
 // export { dolorContent } from './dolor';
 // export { ansiedadContent } from './ansiedad';
@@ -13,6 +13,7 @@ export { tdahContent } from './tdah';
 
 import type { LandingPageContent } from '../types/landing';
 import { tdahContent } from './tdah';
+import { autismoContent } from './autismo';
 
 export type LandingSlug =
 	| 'tdah'
@@ -24,7 +25,7 @@ export type LandingSlug =
 
 const landingContentMap: Partial<Record<LandingSlug, LandingPageContent>> = {
 	tdah: tdahContent,
-	// Add more as they are created
+	autismo: autismoContent,
 };
 
 export const getLandingContent = (

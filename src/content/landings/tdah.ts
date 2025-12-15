@@ -48,7 +48,8 @@ export const tdahContent: LandingPageContent = {
 			{
 				icon: 'control',
 				title: 'Mejor autocontrol',
-				description: 'Avances en autocontrol y una menor impulsividad, facilitando la convivencia familiar y social.',
+				description:
+					'Avances en autocontrol y una menor impulsividad, facilitando la convivencia familiar y social.',
 			},
 			{
 				icon: 'academic',
@@ -92,12 +93,14 @@ export const tdahContent: LandingPageContent = {
 
 	whoCanBenefit: {
 		title: 'Para quién es ideal este tratamiento',
-		subtitle: 'La EMT en Frequens está pensada para diferentes perfiles de pacientes con TDAH.',
+		subtitle:
+			'La EMT en Frequens está pensada para diferentes perfiles de pacientes con TDAH.',
 		beneficiaries: [
 			{
 				icon: 'users',
 				title: 'Niños, adolescentes y adultos con TDAH',
-				description: 'Personas que buscan mejorar su enfoque, disciplina y regulación emocional.',
+				description:
+					'Personas que buscan mejorar su enfoque, disciplina y regulación emocional.',
 			},
 			{
 				icon: 'briefcase',
@@ -108,7 +111,8 @@ export const tdahContent: LandingPageContent = {
 			{
 				icon: 'refresh',
 				title: 'Sin progreso con terapias tradicionales',
-				description: 'Quienes han probado otros tratamientos y no han visto progresos significativos.',
+				description:
+					'Quienes han probado otros tratamientos y no han visto progresos significativos.',
 			},
 			{
 				icon: 'heart',
@@ -126,7 +130,8 @@ export const tdahContent: LandingPageContent = {
 			{
 				icon: 'check-circle',
 				title: 'Atención sostenida',
-				description: 'Mejora la capacidad de mantener el enfoque por períodos más largos.',
+				description:
+					'Mejora la capacidad de mantener el enfoque por períodos más largos.',
 			},
 			{
 				icon: 'check-circle',
@@ -141,12 +146,14 @@ export const tdahContent: LandingPageContent = {
 			{
 				icon: 'check-circle',
 				title: 'Claridad mental',
-				description: 'Más claridad para estudiar, trabajar o convivir en familia.',
+				description:
+					'Más claridad para estudiar, trabajar o convivir en familia.',
 			},
 			{
 				icon: 'check-circle',
 				title: 'Reducción de medicación',
-				description: 'Posible reducción en la necesidad de medicación, según tu caso.',
+				description:
+					'Posible reducción en la necesidad de medicación, según tu caso.',
 			},
 			{
 				icon: 'check-circle',
@@ -190,12 +197,14 @@ export const tdahContent: LandingPageContent = {
 
 	process: {
 		title: 'Tu camino hacia una vida más enfocada',
-		subtitle: 'En Frequens diseñamos un plan personalizado para cada paciente con TDAH.',
+		subtitle:
+			'En Frequens diseñamos un plan personalizado para cada paciente con TDAH.',
 		steps: [
 			{
 				number: 1,
 				title: 'Valoración inicial gratuita',
-				description: 'Realizamos una evaluación neuropsicológica para entender tus síntomas, tu historia y tus objetivos.',
+				description:
+					'Realizamos una evaluación neuropsicológica para entender tus síntomas, tu historia y tus objetivos.',
 			},
 			{
 				number: 2,
@@ -212,7 +221,8 @@ export const tdahContent: LandingPageContent = {
 			{
 				number: 4,
 				title: 'Seguimiento y ajuste',
-				description: 'Evaluamos tu progreso y, de ser necesario, ajustamos el protocolo para optimizar los resultados.',
+				description:
+					'Evaluamos tu progreso y, de ser necesario, ajustamos el protocolo para optimizar los resultados.',
 			},
 		],
 		ctaText: 'Agendar valoración gratuita',
