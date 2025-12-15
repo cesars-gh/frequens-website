@@ -23,3 +23,6 @@ TODO.*
 
 # jetbrains setting folder
 .idea/
+
+# assets and miscellaneous files
+misc/
