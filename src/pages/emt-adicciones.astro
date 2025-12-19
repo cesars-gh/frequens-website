@@ -26,7 +26,7 @@ import { adiccionesContent } from '../data';
 	<main class="min-h-screen bg-white">
 		<Header />
 		<HeroSection content={adiccionesContent.hero}>
-			<HeroLandingSlider />
+			<HeroLandingSlider excludeChildren={true} />
 		</HeroSection>
 		<WhyEMTSection content={adiccionesContent.whyEMT} />
 		<HowEMTWorksSection content={adiccionesContent.howItWorks} />

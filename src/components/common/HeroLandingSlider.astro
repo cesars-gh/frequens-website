@@ -1,35 +1,46 @@
 ---
 import { Icon } from 'astro-icon/components';
 
+type SliderImage = {
+	src: string;
+	alt: string;
+};
+
 type Props = {
 	class?: string;
 	ariaLabel?: string;
+	images?: SliderImage[];
+	excludeChildren?: boolean;
 };
 
-const altTexts = [
+const defaultAltTexts = [
 	'Frequens - EMT para TDAH en Mérida',
 	'Frequens - EMT para TDAH en Niños',
 	'Frequens - EMT para TDAH en Adultos',
 ];
 
-const images = [
-	{ src: '/images/slider/emt-1.jpg', alt: altTexts[0] },
-	{ src: '/images/slider/emt-nino-1.jpg', alt: altTexts[1] },
-	{ src: '/images/slider/emt-nino-2.jpg', alt: altTexts[1] },
-	{ src: '/images/slider/emt-nino-3.jpg', alt: altTexts[1] },
-	{ src: '/images/slider/emt-nino-4.jpg', alt: altTexts[1] },
-	{ src: '/images/slider/emt-adulto-1.jpg', alt: altTexts[2] },
-	{ src: '/images/slider/emt-adulto-2.jpg', alt: altTexts[2] },
-	{ src: '/images/slider/emt-adulto-3.jpg', alt: altTexts[2] },
-	{ src: '/images/slider/emt-adulto-4.jpg', alt: altTexts[2] },
-	{ src: '/images/slider/emt-adulto-5.jpg', alt: altTexts[2] },
+const defaultImages: SliderImage[] = [
+	{ src: '/images/slider/emt-1.jpg', alt: defaultAltTexts[0] },
+	{ src: '/images/slider/emt-nino-1.jpg', alt: defaultAltTexts[1] },
+	{ src: '/images/slider/emt-nino-2.jpg', alt: defaultAltTexts[1] },
+	{ src: '/images/slider/emt-nino-3.jpg', alt: defaultAltTexts[1] },
+	{ src: '/images/slider/emt-nino-4.jpg', alt: defaultAltTexts[1] },
+	{ src: '/images/slider/emt-adulto-1.jpg', alt: defaultAltTexts[2] },
+	{ src: '/images/slider/emt-adulto-2.jpg', alt: defaultAltTexts[2] },
+	{ src: '/images/slider/emt-adulto-3.jpg', alt: defaultAltTexts[2] },
+	{ src: '/images/slider/emt-adulto-4.jpg', alt: defaultAltTexts[2] },
+	{ src: '/images/slider/emt-adulto-5.jpg', alt: defaultAltTexts[2] },
 ];
 
-const { class: className = '', ariaLabel = 'Galería de imágenes' } = Astro.props;
+const adultsOnlyImages: SliderImage[] = defaultImages.filter(img => !img.src.includes('nino'));
+
+const { class: className = '', ariaLabel = 'Galería de imágenes', images: customImages, excludeChildren = false } = Astro.props;
+
+const images = customImages ?? (excludeChildren ? adultsOnlyImages : defaultImages);
 
 const sliderId = `hero-landing-slider-${crypto.randomUUID()}`;
 const sliderHeight = 'h-[85svh] lg:h-[40svh]';
-const sliderImageClass = 'w-auto object-cover aspect-9/16 lg:-translate-y-1/4';
+const sliderImageClass = 'w-full h-full object-cover object-center';
 ---
 
 <section
