@@ -41,7 +41,7 @@ export const dolorContent: LandingPageContent = {
 		],
 		highlights: [
 			{
-				icon: 'trending-up',
+				icon: 'trending-down',
 				title: 'Disminuye la percepción dolorosa',
 				description:
 					'La EMT ayuda a reducir la intensidad del dolor de forma sostenida mediante neuromodulación.',
@@ -64,7 +64,7 @@ export const dolorContent: LandingPageContent = {
 	howItWorks: {
 		title: '¿Cómo actúa la EMT para reducir el dolor?',
 		statistic:
-			'Reducción del dolor hasta en un 30-50% en pacientes respondedores',
+			'Reducción del dolor hasta en un 30-50% en pacientes candidatos',
 		cards: [
 			{
 				icon: 'bolt',

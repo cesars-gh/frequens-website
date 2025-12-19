@@ -47,7 +47,7 @@ export const adiccionesContent: LandingPageContent = {
 					'Estudios reportan una reducción significativa del craving intenso y la urgencia por consumir.',
 			},
 			{
-				icon: 'trending-up',
+				icon: 'trending-down',
 				title: 'Reducción de recaídas',
 				description:
 					'Pacientes muestran menor frecuencia de recaídas y mejor manejo de impulsos.',

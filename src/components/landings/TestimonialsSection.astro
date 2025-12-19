@@ -20,14 +20,6 @@ const { content } = Astro.props;
 				{
 					content.testimonials.map((testimonial) => (
 						<div class="bg-white rounded-xl shadow-sm overflow-hidden">
-							<div class="aspect-4/3 overflow-hidden">
-								<img
-									src={testimonial.image}
-									alt={testimonial.imageAlt}
-									class="w-full h-full object-cover object-center"
-									loading="lazy"
-								/>
-							</div>
 							<div class="p-6">
 								<div class="flex items-start gap-3">
 									<Icon
