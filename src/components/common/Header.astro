@@ -1,11 +1,10 @@
 ---
 import { Icon } from 'astro-icon/components';
 import { TREATMENTS_LINKS } from '../../data/treatments';
-const { PUBLIC_WHATSAPP_LINK, PUBLIC_CALENDLY_URL } = import.meta.env;
 
 const navLinks = [
 	{ href: '/', label: 'Inicio' },
-	{ href: '/#sobre-nosotros', label: 'Nosotros' },
+	{ href: '/#sobre-nosotros	', label: 'Nosotros' },
 	{ href: '/#resultados', label: 'Resultados' },
 ];
 
@@ -13,9 +12,11 @@ const tratamientosDropdown = {
 	label: 'Tratamientos',
 	items: [...TREATMENTS_LINKS],
 };
+
+const isAgendarCitaPage = Astro.url.pathname === '/agendar-cita';
 ---
 
-<header class="bg-white shadow-sm relative z-50">
+<header class="bg-white shadow-sm fixed top-0 left-0 right-0 z-50 lg:relative">
 	<div class="container mx-auto px-4 py-4">
 		<div class="flex items-center justify-between">
 			<!-- Logo -->
@@ -88,17 +89,17 @@ const tratamientosDropdown = {
 			</nav>
 
 			<div class="flex items-center gap-4">
-				<!-- CTA Button -->
-				<a
-					href={PUBLIC_CALENDLY_URL}
-					target="_blank"
-					rel="noopener noreferrer"
-					class="btn-primary hidden sm:flex items-center gap-2">
-					<Icon
-						name="calendar"
-						class="w-5 h-5" />
-					Agendar Evaluación
-				</a>
+				{!isAgendarCitaPage && (
+					<!-- CTA Button -->
+					<a
+						href="/agendar-cita"
+						class="btn-primary hidden sm:flex items-center gap-2">
+						<Icon
+							name="calendar"
+							class="w-5 h-5" />
+						Agendar Evaluación
+					</a>
+				)}
 
 				<!-- Mobile Menu Button -->
 				<button
@@ -203,21 +204,20 @@ const tratamientosDropdown = {
 			</nav>
 
 			<!-- Mobile Menu Footer - Only visible on small screens -->
-			<div class="p-4 border-t border-gray-100 sm:hidden">
-				<a
-					href={PUBLIC_WHATSAPP_LINK}
-					target="_blank"
-					rel="noopener noreferrer"
-					class="btn-primary w-full flex items-center justify-center gap-2">
-					<Icon
-						name="calendar"
-						class="w-5 h-5" />
-					Agendar Evaluación
-				</a>
-			</div>
+			{!isAgendarCitaPage && (
+				<div class="p-4 border-t border-gray-100 sm:hidden">
+					<a
+						href="/agendar-cita"
+						class="btn-primary w-full flex items-center justify-center gap-2">
+						Agendar Evaluación
+					</a>
+				</div>
+			)}
 		</div>
 	</div>
 </header>
+<!-- Spacer for fixed header on mobile -->
+<div class="h-[72px] lg:hidden"></div>
 
 <style>
 /* Hamburger animation when menu is open */

@@ -1,0 +1,46 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/common/Header.astro';
+import Footer from '../components/common/Footer.astro';
+---
+
+<Layout
+	title="Agendar Cita | Frequens Neuro Clinic"
+	description="Agenda tu sesión de evaluación gratuita"
+	keywords="Agendar Cita, Agenda tu cita, Evaluación Gratuita">
+	<main class="min-h-screen bg-white">
+		<Header />
+		<section class="bg-linear-to-br from-main-50 to-beige py-12 lg:py-20">
+			<!-- Top Content - Centered -->
+			<div class="mb-8 lg:mb-12 max-w-5xl mx-auto text-center">
+				<!-- Main Headline -->
+				<h1 class="text-3xl lg:text-4xl xl:text-5xl font-bold text-secondary mb-6">
+					Agenda tu sesión de evaluación gratuita
+				</h1>
+
+				<!-- Description -->
+				<p class="text-lg lg:text-xl text-secondary-600 leading-relaxed mb-8 max-w-3xl mx-auto">
+					Por favor, completa el siguiente formulario.
+				</p>
+			</div>
+			<iframe
+				src="https://api.leadconnectorhq.com/widget/form/DLF7LMOLgjFxYealqSmn"
+				style="width:100%;height:100%;border:none;border-radius:3px"
+				id="inline-DLF7LMOLgjFxYealqSmn"
+				data-layout="{'id':'INLINE'}"
+				data-trigger-type="alwaysShow"
+				data-trigger-value=""
+				data-activation-type="alwaysActivated"
+				data-activation-value=""
+				data-deactivation-type="neverDeactivate"
+				data-deactivation-value=""
+				data-form-name="Form landing frequens"
+				data-height="1722"
+				data-layout-iframe-id="inline-DLF7LMOLgjFxYealqSmn"
+				data-form-id="DLF7LMOLgjFxYealqSmn"
+				title="Form landing frequens"></iframe>
+		</section>
+		<script src="https://link.msgsndr.com/js/form_embed.js"></script>
+		<Footer />
+	</main>
+</Layout>
