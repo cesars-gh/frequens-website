@@ -76,3 +76,13 @@ import { autismoContent } from '../data';
   <!-- ... all sections with autismoContent -->
 </Layout>
 ```
+
+## Deployment and Preview
+
+The project uses Netlify for deployment and previews.
+Once you create a PR, a preview link will be generated in the PR description.
+
+Public Repository: https://github.com/cesars-gh/frequens-website
+Example of deploy preview: https://deploy-preview-3--frequens.netlify.app
+
+Deploymeny preview could take up to 5 minutes to be ready.
