@@ -26,7 +26,7 @@ import { depresionContent } from '../data';
 	<main class="min-h-screen bg-white">
 		<Header />
 		<HeroSection content={depresionContent.hero}>
-			<HeroLandingSlider />
+			<HeroLandingSlider excludeChildren={true} />
 		</HeroSection>
 		<WhyEMTSection content={depresionContent.whyEMT} />
 		<HowEMTWorksSection content={depresionContent.howItWorks} />

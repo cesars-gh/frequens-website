@@ -63,8 +63,7 @@ export const dolorContent: LandingPageContent = {
 
 	howItWorks: {
 		title: '¿Cómo actúa la EMT para reducir el dolor?',
-		statistic:
-			'Reducción del dolor hasta en un 30-50% en pacientes candidatos',
+		statistic: 'Reducción del dolor hasta en un 30-50% en pacientes candidatos',
 		cards: [
 			{
 				icon: 'bolt',
