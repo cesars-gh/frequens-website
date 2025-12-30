@@ -32,9 +32,14 @@ const defaultImages: SliderImage[] = [
 	{ src: '/images/slider/emt-adulto-5.jpg', alt: defaultAltTexts[2] },
 ];
 
-const adultsOnlyImages: SliderImage[] = defaultImages.filter(img => !img.src.includes('nino'));
+const adultsOnlyImages: SliderImage[] = defaultImages.filter((img) => !img.src.includes('nino'));
 
-const { class: className = '', ariaLabel = 'Galería de imágenes', images: customImages, excludeChildren = false } = Astro.props;
+const {
+	class: className = '',
+	ariaLabel = 'Galería de imágenes',
+	images: customImages,
+	excludeChildren = false,
+} = Astro.props;
 
 const images = customImages ?? (excludeChildren ? adultsOnlyImages : defaultImages);
 
