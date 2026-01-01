@@ -2,6 +2,8 @@
 import { Icon } from 'astro-icon/components';
 import { TREATMENTS_LINKS } from '../../data/treatments';
 
+const { PUBLIC_WHATSAPP_LINK } = import.meta.env;
+
 const navLinks = [
 	{ href: '/', label: 'Inicio' },
 	{ href: '/#sobre-nosotros	', label: 'Nosotros' },
@@ -12,8 +14,6 @@ const tratamientosDropdown = {
 	label: 'Tratamientos',
 	items: [...TREATMENTS_LINKS],
 };
-
-const isAgendarCitaPage = Astro.url.pathname === '/agendar-cita';
 ---
 
 <header class="bg-white shadow-sm fixed top-0 left-0 right-0 z-50 lg:relative">
@@ -89,17 +89,17 @@ const isAgendarCitaPage = Astro.url.pathname === '/agendar-cita';
 			</nav>
 
 			<div class="flex items-center gap-4">
-				{!isAgendarCitaPage && (
-					<!-- CTA Button -->
-					<a
-						href="/agendar-cita"
-						class="btn-primary hidden sm:flex items-center gap-2">
-						<Icon
-							name="calendar"
-							class="w-5 h-5" />
-						Agendar Evaluación
-					</a>
-				)}
+				<!-- CTA Button -->
+				<a
+					href={PUBLIC_WHATSAPP_LINK}
+					target="_blank"
+					rel="noopener noreferrer"
+					class="btn-whatsapp hidden sm:flex items-center gap-2">
+					<Icon
+						name="whatsapp"
+						class="w-5 h-5" />
+					Contáctanos
+				</a>
 
 				<!-- Mobile Menu Button -->
 				<button
@@ -204,15 +204,18 @@ const isAgendarCitaPage = Astro.url.pathname === '/agendar-cita';
 			</nav>
 
 			<!-- Mobile Menu Footer - Only visible on small screens -->
-			{!isAgendarCitaPage && (
-				<div class="p-4 border-t border-gray-100 sm:hidden">
-					<a
-						href="/agendar-cita"
-						class="btn-primary w-full flex items-center justify-center gap-2">
-						Agendar Evaluación
-					</a>
-				</div>
-			)}
+			<div class="p-4 border-t border-gray-100 sm:hidden">
+				<a
+					href={PUBLIC_WHATSAPP_LINK}
+					target="_blank"
+					rel="noopener noreferrer"
+					class="btn-whatsapp w-full flex items-center justify-center gap-2">
+					<Icon
+						name="whatsapp"
+						class="w-5 h-5" />
+					Contáctanos
+				</a>
+			</div>
 		</div>
 	</div>
 </header>

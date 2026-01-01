@@ -2,8 +2,6 @@
 import { Icon } from 'astro-icon/components';
 import type { FinalCTASectionContent } from '../../types/landing';
 
-const { PUBLIC_CALENDLY_URL } = import.meta.env;
-
 type Props = {
 	content: FinalCTASectionContent;
 };
@@ -21,9 +19,7 @@ const { content } = Astro.props;
 				set:html={content.description} />
 
 			<a
-				href={PUBLIC_CALENDLY_URL}
-				target="_blank"
-				rel="noopener noreferrer"
+				href="/agendar-cita/"
 				class="btn-primary inline-flex items-center gap-2 text-lg">
 				<Icon
 					name="calendar"

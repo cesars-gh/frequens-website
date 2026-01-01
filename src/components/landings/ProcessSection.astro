@@ -2,8 +2,6 @@
 import { Icon } from 'astro-icon/components';
 import type { ProcessSectionContent } from '../../types/landing';
 
-const { PUBLIC_CALENDLY_URL } = import.meta.env;
-
 type Props = {
 	content: ProcessSectionContent;
 };
@@ -33,9 +31,7 @@ const { content } = Astro.props;
 
 			<div class="text-center">
 				<a
-					href={PUBLIC_CALENDLY_URL}
-					target="_blank"
-					rel="noopener noreferrer"
+					href="/agendar-cita/"
 					class="btn-primary inline-flex items-center gap-2">
 					<Icon
 						name="calendar"
