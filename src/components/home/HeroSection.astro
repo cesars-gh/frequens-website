@@ -1,6 +1,5 @@
 ---
 import { Icon } from 'astro-icon/components';
-const { PUBLIC_WHATSAPP_LINK } = import.meta.env;
 ---
 
 <section class="bg-linear-to-br from-main-50 to-beige py-12 lg:py-20">
@@ -75,14 +74,12 @@ const { PUBLIC_WHATSAPP_LINK } = import.meta.env;
 
 			<div class="text-center">
 				<a
-					href={PUBLIC_WHATSAPP_LINK}
-					target="_blank"
-					rel="noopener noreferrer"
-					class="btn-whatsapp">
+					href="/agendar-cita/"
+					class="btn-primary inline-flex items-center gap-2">
 					<Icon
-						name="whatsapp"
+						name="calendar"
 						class="w-5 h-5" />
-					Contactar Especialista
+					Agendar Evaluación
 				</a>
 			</div>
 		</div>
