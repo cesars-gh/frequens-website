@@ -7,6 +7,7 @@ type Props = {
 };
 
 const { content } = Astro.props;
+const hasReferences = content.references && content.references.length > 0;
 ---
 
 <section class="py-20 bg-white">
@@ -37,6 +38,47 @@ const { content } = Astro.props;
 					))
 				}
 			</div>
+
+			{
+				hasReferences && (
+					<div class="mt-12">
+						<details class="group bg-gray-50 rounded-xl border border-gray-200">
+							<summary class="flex justify-between items-center cursor-pointer p-6 text-lg font-semibold text-secondary-800">
+								<span class="flex items-center gap-3">
+<Icon name="glasses" class="w-5 h-5 text-main-600" />
+								Referencias científicas
+								</span>
+								<Icon
+									name="chevron-down"
+									class="w-5 h-5 text-main-600 transition-transform group-open:rotate-180"
+								/>
+							</summary>
+							<div class="px-6 pb-6">
+								<ul class="space-y-3">
+									{content.references!.map((ref) => (
+										<li>
+											<a
+												href={ref.url}
+												target="_blank"
+												rel="noopener noreferrer"
+												class="text-secondary-600 hover:text-main-600 transition-colors inline-flex items-start gap-2 group/link"
+											>
+												<Icon
+													name="document"
+													class="w-4 h-4 mt-1 shrink-0 text-main-500"
+												/>
+												<span class="underline underline-offset-2 decoration-gray-300 group-hover/link:decoration-main-500">
+													{ref.title}
+												</span>
+											</a>
+										</li>
+									))}
+								</ul>
+							</div>
+						</details>
+					</div>
+				)
+			}
 		</div>
 	</div>
 </section>

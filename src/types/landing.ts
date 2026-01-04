@@ -75,10 +75,16 @@ export interface BenefitsSectionContent {
 	benefits: BenefitItem[];
 }
 
+export interface ScientificReference {
+	title: string;
+	url: string;
+}
+
 export interface ScienceEvidenceSectionContent {
 	title: string;
 	subtitle: string;
 	evidenceCards: FeatureCard[];
+	references?: ScientificReference[];
 }
 
 export interface ProcessSectionContent {

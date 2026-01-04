@@ -193,6 +193,47 @@ export const depresionContent: LandingPageContent = {
 					'Estudios de neuroimagen muestran cambios reales en conectividad y actividad cerebral.',
 			},
 		],
+		references: [
+			{
+				title:
+					'Estimulación Magnética Transcraneal. Opción para tratar la depresión moderada',
+				url: 'https://www.dgcs.unam.mx/boletin/bdboletin/2015_639.html',
+			},
+			{
+				title:
+					'Efficacy of repetitive transcranial magnetic stimulation (rTMS) adjunctive therapy for major depressive disorder (MDD) after two antidepressant treatment failures: meta-analysis of randomized sham-controlled trials',
+				url: 'https://link.springer.com/article/10.1186/s12888-023-05033-y',
+			},
+			{
+				title: 'Estimulación magnética transcraneal (EMT) para la depresión',
+				url: 'https://www.cochrane.org/es/evidence/CD003493_transcranial-magnetic-stimulation-tms-depression',
+			},
+			{
+				title:
+					'Meta-analysis of the Efficacy and Safety of Repetitive Transcranial Magnetic Stimulation (rTMS) in the Treatment of Depression',
+				url: 'https://pubmed.ncbi.nlm.nih.gov/29719344/',
+			},
+			{
+				title:
+					'Transcranial Magnetic Stimulation in the Treatment of Depression. A Double-blind, Placebo-Controlled Trial',
+				url: 'https://jamanetwork.com/journals/jamapsychiatry/fullarticle/207938',
+			},
+			{
+				title:
+					'Estimulación magnética transcraneal en el tratamiento de la depresión mayor resistente a terapia convencional',
+				url: 'https://revistareg.com/index.php/1/article/view/425',
+			},
+			{
+				title:
+					'Technical Report: Efficacy and Safety of Low-Intensity Transcranial Magnetic Stimulation in the Remission of Depressive Symptoms in Patients With Treatment-Resistant Depression in Mexico',
+				url: 'https://pubmed.ncbi.nlm.nih.gov/38832162/',
+			},
+			{
+				title:
+					'Efecto de Estimulación Magnética Transcraneal en pacientes con depresión unipolar mayor refractaria y ansiedad comórbida',
+				url: 'https://www.inelperu.com/wp-content/uploads/2021/01/TMS_RNP_2.pdf',
+			},
+		],
 	},
 
 	process: {
