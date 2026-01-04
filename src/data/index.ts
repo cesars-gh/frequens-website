@@ -5,6 +5,7 @@
 
 export { tdahContent } from './tdah';
 export { autismoContent } from './autismo';
+export { faqPageContent } from './faq';
 export { adiccionesContent } from './adicciones';
 export { dolorContent } from './dolor';
 export { ansiedadContent } from './ansiedad';

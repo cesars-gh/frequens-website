@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <!-- Person silhouette -->
+  <circle cx="12" cy="5" r="2.5"/>
+  <path d="M12 7.5v7"/>
+  <path d="M8 10l4 1.5 4-1.5"/>
+  <path d="M9 21l3-6.5 3 6.5"/>
+  <!-- Pain burst indicator on back/torso -->
+  <path d="M17 12l1.5 0"/>
+  <path d="M17.5 10l1.2-1"/>
+  <path d="M17.5 14l1.2 1"/>
+</svg>

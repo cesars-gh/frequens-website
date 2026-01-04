@@ -2,11 +2,19 @@
 import { Icon } from 'astro-icon/components';
 import { TREATMENTS_LINKS } from '../../data/treatments';
 
-const { PUBLIC_WHATSAPP_LINK } = import.meta.env;
+const PUBLIC_WHATSAPP_LINK = import.meta.env.PUBLIC_WHATSAPP_LINK;
+const emailAddress = 'frequensneuroclinic@gmail.com';
+
+const INFO_LINKS = {
+	howItWorks: '/#tratamiento',
+	benefits: '/#resultados',
+	team: '/#sobre-nosotros',
+	faq: '/preguntas-frecuentes', // this one has a page
+};
 ---
 
 <footer class="bg-secondary-900 text-white py-12">
-	<div class="container mx-auto px-4">
+	<div class="container mx-auto px-4 max-w-7xl">
 		<!-- Top Row -->
 		<div class="grid md:grid-cols-4 gap-8 mb-8">
 			<!-- Logo and Description -->
@@ -47,28 +55,28 @@ const { PUBLIC_WHATSAPP_LINK } = import.meta.env;
 				<ul class="space-y-2 text-sm">
 					<li>
 						<a
-							href="#tratamiento"
+							href={INFO_LINKS.howItWorks}
 							class="hover:text-main-400 transition-colors"
 							>Cómo Funciona</a
 						>
 					</li>
 					<li>
 						<a
-							href="#resultados"
+							href={INFO_LINKS.benefits}
 							class="hover:text-main-400 transition-colors"
 							>Beneficios</a
 						>
 					</li>
 					<li>
 						<a
-							href="#sobre-nosotros"
+							href={INFO_LINKS.team}
 							class="hover:text-main-400 transition-colors"
 							>Nuestro Equipo</a
 						>
 					</li>
 					<li>
 						<a
-							href="#"
+							href={INFO_LINKS.faq}
 							class="hover:text-main-400 transition-colors"
 							>Preguntas Frecuentes</a
 						>
@@ -102,6 +110,17 @@ const { PUBLIC_WHATSAPP_LINK } = import.meta.env;
 							>Instagram</a
 						>
 					</li>
+					<li class="flex items-center gap-2">
+						<Icon
+							name="email"
+							class="w-4 h-4" />
+						<a
+							href={`mailto:${emailAddress}`}
+							target="_blank"
+							class="hover:text-main-400 transition-colors"
+							>{emailAddress}</a
+						>
+					</li>
 					<li class="flex items-start gap-2">
 						<Icon
 							name="map-pin"
@@ -122,19 +141,12 @@ const { PUBLIC_WHATSAPP_LINK } = import.meta.env;
 		<div class="border-t border-secondary-700 pt-8 flex flex-col md:flex-row justify-between items-center">
 			<p class="text-sm text-secondary-400 mb-4 md:mb-0">
 				&copy; {new Date().getFullYear()}&nbsp;Frequens Neuro Clinic. Todos los Derechos Reservados
-			</p>
-			<div class="flex space-x-6">
 				<a
-					href="#"
-					class="text-sm text-secondary-400 hover:text-main-400 transition-colors"
+					href="/terms"
+					class="text-sm text-secondary-400 ml-4 underline hover:text-main-400 transition-colors"
 					>Términos de Uso</a
 				>
-				<a
-					href="#"
-					class="text-sm text-secondary-400 hover:text-main-400 transition-colors"
-					>Política de Privacidad</a
-				>
-			</div>
+			</p>
 		</div>
 	</div>
 </footer>

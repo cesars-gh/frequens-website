@@ -2,7 +2,7 @@
 import { Icon } from 'astro-icon/components';
 import { TREATMENTS_LINKS } from '../../data/treatments';
 
-const { PUBLIC_WHATSAPP_LINK } = import.meta.env;
+const PUBLIC_WHATSAPP_LINK = import.meta.env.PUBLIC_WHATSAPP_LINK;
 
 const navLinks = [
 	{ href: '/', label: 'Inicio' },
@@ -209,7 +209,7 @@ const tratamientosDropdown = {
 					href={PUBLIC_WHATSAPP_LINK}
 					target="_blank"
 					rel="noopener noreferrer"
-					class="btn-primary w-full flex items-center justify-center gap-2">
+					class="btn-whatsapp lg:hidden w-full flex items-center justify-center gap-2">
 					<Icon
 						name="whatsapp"
 						class="w-5 h-5" />

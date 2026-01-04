@@ -17,26 +17,15 @@ import ScheduleCTASection from '../components/common/ScheduleCTASection.astro';
 <Layout title="Frequens Neuro Clinic - Estimulación Magnética Transcraneal">
 	<main class="min-h-screen bg-white">
 		<Header />
-		<section id="inicio">
-			<HeroSection />
-		</section>
+		<HeroSection sectionId="inicio" />
 		<WhatIsEMTSection />
 		<WhoWeHelpSection />
-		<!-- <WhyChooseFrequensSection /> -->
-		<section id="sobre-nosotros">
-			<AboutSection />
-		</section>
+		<AboutSection sectionId="sobre-nosotros" />
 		<WhyChooseUsSection />
-		<section id="tratamiento">
-			<TreatmentProcessSection />
-		</section>
-		<section id="resultados">
-			<BenefitsSection />
-		</section>
+		<TreatmentProcessSection sectionId="tratamiento" />
+		<BenefitsSection sectionId="resultados" />
 		<ScheduleCTASection sectionClass="my-20 max-w-6xl mx-auto" />
-		<section id="ubicacion">
-			<MapSection />
-		</section>
+		<MapSection sectionId="ubicacion" />
 		<Footer />
 	</main>
 </Layout>
