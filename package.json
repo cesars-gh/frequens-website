@@ -2,11 +2,6 @@
 	"name": "frequens",
 	"type": "module",
 	"version": "0.0.1",
-	"pnpm": {
-		"onlyBuiltDependencies": [
-			"vibe-coding"
-		]
-	},
 	"scripts": {
 		"dev": "astro dev",
 		"build": "astro build",
