@@ -10,6 +10,7 @@ export { adiccionesContent } from './adicciones';
 export { dolorContent } from './dolor';
 export { ansiedadContent } from './ansiedad';
 export { depresionContent } from './depresion';
+export { teptContent } from './tept';
 
 import type { LandingPageContent } from '../types/landing';
 import { tdahContent } from './tdah';
@@ -18,6 +19,7 @@ import { adiccionesContent } from './adicciones';
 import { dolorContent } from './dolor';
 import { ansiedadContent } from './ansiedad';
 import { depresionContent } from './depresion';
+import { teptContent } from './tept';
 
 export type LandingSlug =
 	| 'tdah'
@@ -25,7 +27,8 @@ export type LandingSlug =
 	| 'adicciones'
 	| 'dolor'
 	| 'ansiedad'
-	| 'depresion';
+	| 'depresion'
+	| 'tept';
 
 const landingContentMap: Record<LandingSlug, LandingPageContent> = {
 	tdah: tdahContent,
@@ -34,6 +37,7 @@ const landingContentMap: Record<LandingSlug, LandingPageContent> = {
 	dolor: dolorContent,
 	ansiedad: ansiedadContent,
 	depresion: depresionContent,
+	tept: teptContent,
 };
 
 export const getLandingContent = (
