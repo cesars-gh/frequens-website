@@ -5,4 +5,5 @@ export const TREATMENTS_LINKS = [
 	{ href: '/emt-dolor', label: 'EMT para Dolor' },
 	{ href: '/emt-ansiedad', label: 'EMT para Ansiedad' },
 	{ href: '/emt-depresion', label: 'EMT para Depresión' },
+	{ href: '/emt-tept', label: 'EMT para TEPT' },
 ];
